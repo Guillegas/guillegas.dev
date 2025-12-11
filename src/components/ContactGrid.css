@@ -40,4 +40,49 @@
 .contact-info span {
   font-size: 0.9rem;
   color: #aaa;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-card {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+  
+  .contact-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  
+  .contact-info h4 {
+    font-size: 1rem;
+  }
+  
+  .contact-info span {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .contact-info span {
+    font-size: 0.8rem;
+  }
 }

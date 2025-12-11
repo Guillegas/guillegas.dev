@@ -109,21 +109,21 @@ function App() {
                 title="Español"
                 onClick={() => switchLanguage("es")}
               >
-                🇪🇸
+                ES
               </button>
               <button
                 className={`flag-btn ${language === "en" ? "active" : ""}`}
                 title="English"
                 onClick={() => switchLanguage("en")}
               >
-                🇬🇧
+                EN
               </button>
               <button
                 className={`flag-btn ${language === "de" ? "active" : ""}`}
                 title="Deutsch"
                 onClick={() => switchLanguage("de")}
               >
-                🇩🇪
+                DE
               </button>
             </li>
           </ul>
