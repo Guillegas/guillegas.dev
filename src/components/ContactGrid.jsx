@@ -21,7 +21,7 @@ export default function ContactGrid() {
     {
       name: "Email",
       value: "guilleandumarti@gmail.com",
-      url: "mailto:guilleandumarti@gmail.com",
+      url: "",
       icon: "📧",
     },
     {
