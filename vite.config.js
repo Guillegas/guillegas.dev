@@ -5,11 +5,15 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   
-  // AÑADIMOS ESTA SECCIÓN PARA ELIMINAR EL ERROR
+  // 1. OPTIMIZE DEPS: Evita que Vite procese y pre-bundle este paquete en desarrollo.
+  optimizeDeps: {
+    exclude: ['@vercel/analytics'] 
+  },
+
+  // 2. BUILD OPTIONS: Asegura que Rollup (el bundler) ignore las dependencias de Next.js.
   build: {
     rollupOptions: {
       external: [
-        // Excluimos las dependencias problemáticas
         '@vercel/analytics', 
         'next/navigation' 
       ],
