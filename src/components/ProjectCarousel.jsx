@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProjectCarousel.css";
 
 export default function ProjectCarousel({ projects = [], onSelectProject }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % projects.length);
@@ -14,6 +24,11 @@ export default function ProjectCarousel({ projects = [], onSelectProject }) {
 
   if (!projects.length) return null;
 
+  // Ajustar el ancho de la tarjeta y el gap según el dispositivo
+  const cardWidth = isMobile ? 160 : 280;
+  const gap = isMobile ? 12 : 20;
+  const step = cardWidth + gap;
+
   return (
     <div className="project-carousel-wrapper">
       <button className="carousel-arrow left" onClick={prevSlide}>
@@ -24,8 +39,10 @@ export default function ProjectCarousel({ projects = [], onSelectProject }) {
         <div
           className="project-track"
           style={{
-            transform: `translateX(calc(50% - ${activeIndex * 300 + 150}px))`,
-          }} // 280px width + 20px gap = 300px step
+            transform: `translateX(calc(50% - ${
+              activeIndex * step + cardWidth / 2
+            }px))`,
+          }}
         >
           {projects.map((project, index) => {
             const isActive = index === activeIndex;
