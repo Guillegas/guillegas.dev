@@ -38,8 +38,9 @@ export const getProjects = (language = "en") => {
             El código fuente de este sitio web.
             <br />
             <br />
-            Una muestra de mis habilidades en desarrollo frontend, con animaciones
-            WebGL, interfaz glassmorphism y optimizaciones de rendimiento.
+            Una muestra de mis habilidades en desarrollo frontend, con
+            animaciones WebGL, interfaz glassmorphism y optimizaciones de
+            rendimiento.
             <br />
             <br />
             Sirve como mi identidad digital.
@@ -92,7 +93,7 @@ export const getProjects = (language = "en") => {
       description: t.guillegas.full,
       technologies: ["React", "OGL", "Vite", "CSS Variables"],
       image: "/projects/guillegas_dev_preview.png",
-      githubLink: "https://github.com/guillegas/portfolio",
+      githubLink: "https://github.com/Guillegas/guillegas.dev.git",
       color: "#00ff41",
     },
   ];
