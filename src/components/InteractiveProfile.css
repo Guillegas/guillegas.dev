@@ -1,0 +1,160 @@
+.interactive-profile-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  border-radius: inherit;
+}
+
+.interactive-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit; /* Ensure image respects border radius since container no longer clips */
+}
+
+/* Animations for Step Transitions */
+.profile-anim-fade {
+  animation: glitch-fade 0.5s ease-out forwards;
+}
+
+@keyframes glitch-fade {
+  0% {
+    opacity: 0.5;
+    filter: blur(4px) contrast(1.5);
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+  }
+}
+
+/* Steps Styling */
+.interactive-profile-img.step-0 {
+  filter: contrast(1.1) brightness(1.1);
+  image-rendering: pixelated;
+}
+
+.interactive-profile-img.step-1 {
+  filter: blur(0px);
+  image-rendering: pixelated;
+}
+
+.interactive-profile-img.step-2 {
+  filter: none;
+  cursor: default;
+}
+
+/* Tooltip Overlay */
+.profile-overlay-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20; /* Ensure tooltip is on top */
+}
+
+.interactive-profile-container:hover .profile-overlay-tooltip {
+  opacity: 1;
+}
+
+/* Arrow Indicator */
+.profile-arrow-indicator {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff41;
+  animation: float-corner 2s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.arrow-icon {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 0 3px #00ff41);
+}
+
+/* Smiley Indicator */
+.profile-smiley-indicator {
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  color: #00ff41;
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  transform: rotate(-15deg);
+  animation: float-corner 2s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float-corner {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(3px, 3px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -58%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .profile-overlay-tooltip {
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .profile-arrow-indicator {
+    top: -50px;
+    left: -50px;
+    transform: rotate(0deg);
+  }
+}

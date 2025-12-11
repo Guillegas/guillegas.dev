@@ -1,0 +1,468 @@
+/* Layout Structure */
+.app-root {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.terminal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Behind everything */
+  transform: scaleX(-1);
+  pointer-events: none; /* Allow scroll events to pass through */
+  will-change: transform; /* Hint browser to optimize compositing */
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row; /* Side by side */
+  align-items: center; /* Vertically centered */
+  justify-content: space-between; /* Space between text and card */
+  padding: 0 10%;
+  position: relative;
+  gap: 4rem; /* Space between specific elements */
+}
+
+/* Nav Improvements */
+.main-nav {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 1rem 2rem;
+  z-index: 100; /* Ensure clicks work and it stays on top */
+}
+
+.language-flags {
+  display: flex;
+  gap: 1rem;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--glass-border);
+}
+
+.flag-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.5;
+  filter: grayscale(0.5);
+}
+
+.flag-btn:hover,
+.flag-btn.active {
+  transform: scale(1.2);
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+/* .nav-links handled in media queries now for layout, this is mainly reset/base is handled there too. 
+   Removing conflict or redundancy. keeping just the link styles here */
+
+.main-nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.hero-text {
+  flex: 1; 
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: none;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); 
+}
+
+.name-title {
+  font-size: 8rem;
+  margin: 0;
+  line-height: 1.1; 
+  padding-bottom: 0.2em; 
+  letter-spacing: -4px;
+  background: linear-gradient(to right, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.full-name {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 1rem 0 0.5rem 0;
+  color: var(--accent-color);
+}
+
+.role-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Main Content Sections */
+.main-sections {
+  padding: 4rem 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 8rem;
+}
+
+.content-block {
+  padding: 3rem;
+  min-height: 300px;
+}
+
+/* Grid Layouts for Sections */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.grid-layout-reverse {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; 
+  gap: 3rem;
+  align-items: center;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.visual-content {
+  flex: 1;
+  width: 100%; 
+  overflow: hidden; 
+}
+
+/* Override header styles for generic h2 in blocks */
+.content-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--glass-border);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.content-block p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4rem; 
+}
+
+/* Add glass class to footer in JSX, or styling here directly if class not used */
+.app-footer.glass-panel {
+  border-radius: 16px 16px 0 0;
+  border-bottom: none;
+}
+
+/* Responsive */
+/* Profile Photo Frame */
+.profile-frame {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px; 
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+/* Education & Experience Styles */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color, #00ff41);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-color, #00ff41);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.timeline-content h4 {
+  margin: 0.2rem 0 0.5rem;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-header h3 {
+  margin: 0;
+  color: var(--accent-color, #00ff41);
+}
+
+.exp-date {
+  font-family: monospace;
+  color: #aaa;
+}
+
+.company-name {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.experience-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: #ddd;
+}
+
+.experience-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+/* Nav Styles and Responsive Menu */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (min-width: 769px) {
+  .main-nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    z-index: 100;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 6rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-top: 0;
+    padding: 1rem;
+    flex: 0 0 auto; /* Prevent growing to fill screen height */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Nav */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96%;
+    right: auto;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    border-radius: 0;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .hamburger-btn span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .language-flags {
+    margin: 0;
+    padding: 0;
+    border: none;
+    justify-content: center;
+  }
+
+  .name-title {
+    font-size: 6rem; 
+    line-height: 0.9;
+    margin-bottom: 1rem;
+  }
+
+  .full-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-section {
+    padding: 0 5%;
+    padding-top: 140px; 
+    justify-content: flex-start; 
+    min-height: 90vh; 
+  }
+
+  .hero-card {
+    order: 2; 
+  }
+  .hero-text {
+    order: 1;
+  }
+
+  .main-sections {
+    padding: 2rem 5%;
+    gap: 3rem;
+  }
+
+  .grid-layout,
+  .grid-layout-reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .full-width-mobile {
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-block h2 {
+    font-size: 2rem;
+  }
+
+  .profile-frame {
+    width: 250px;
+    height: 250px;
+  }
+}
