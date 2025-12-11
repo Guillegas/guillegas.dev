@@ -9,7 +9,6 @@ import ContactGrid from "./components/ContactGrid";
 import InteractiveProfile from "./components/InteractiveProfile";
 import StackBento from "./components/StackBento";
 import "./App.css";
-import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   const { t, switchLanguage, language } = useLanguage();
