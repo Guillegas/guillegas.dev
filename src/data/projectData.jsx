@@ -4,8 +4,8 @@ export const getProjects = (language = "en") => {
   const descriptions = {
     en: {
       taiko: {
-        short: "AI-powered Inventory SaaS.",
-        full: "A SaaS platform implementing AI for inventory management and small business databases. Features an advisory chatbot for customers to query product availability and details directly from the database.",
+        short: "AI-powered Inventory SaaS with RAG.",
+        full: "A SaaS platform implementing AI for inventory management and small business databases. Features an advisory chatbot powered by LLMs and RAG (Retrieval-Augmented Generation) architecture, utilizing PostgreSQL and Vector Databases for customers to seamlessly query product availability and details.",
         button: "Work in Progress",
       },
       guillegas: {
@@ -27,8 +27,8 @@ export const getProjects = (language = "en") => {
     },
     es: {
       taiko: {
-        short: "SaaS de inventario impulsado por IA.",
-        full: "Una plataforma SaaS que implementa IA para la gestión de inventarios y bases de datos de pequeñas empresas. Cuenta con un chatbot asesor para que los clientes consulten la disponibilidad y los detalles de los productos directamente desde la base de datos.",
+        short: "SaaS de inventario impulsado por IA y RAG.",
+        full: "Una plataforma SaaS que implementa IA para la gestión de inventarios y bases de datos de pequeñas empresas. Cuenta con un chatbot asesor potenciado por LLMs y arquitectura RAG, utilizando PostgreSQL y Bases de Datos Vectoriales para que los clientes consulten la disponibilidad y detalles de los productos fluídamente.",
         button: "En Progreso",
       },
       guillegas: {
@@ -51,8 +51,8 @@ export const getProjects = (language = "en") => {
     },
     de: {
       taiko: {
-        short: "KI-gestütztes Inventar-SaaS.",
-        full: "Eine SaaS-Plattform, die KI für das Inventarmanagement und Datenbanken kleiner Unternehmen implementiert. Verfügt über einen Beratungs-Chatbot, mit dem Kunden Produktverfügbarkeit und Details direkt aus der Datenbank abfragen können.",
+        short: "KI-gestütztes Inventar-SaaS mit RAG.",
+        full: "Eine SaaS-Plattform, die KI für das Inventarmanagement und Datenbanken kleiner Unternehmen implementiert. Verfügt über einen Beratungs-Chatbot, der von LLMs und der RAG-Architektur angetrieben wird und PostgreSQL sowie Vektordatenbanken nutzt, damit Kunden Produktverfügbarkeit und Details reibungslos abfragen können.",
         button: "In Arbeit",
       },
       guillegas: {
@@ -81,7 +81,7 @@ export const getProjects = (language = "en") => {
       title: "TAIKO (TFG)",
       shortDescription: t.taiko.short,
       description: t.taiko.full,
-      technologies: ["React", "FastAPI", "OpenAI API", "PostgreSQL"],
+      technologies: ["React", "FastAPI", "LLMs", "RAG", "Vector DB", "PostgreSQL"],
       image: "/projects/taiko_dashboard.png",
       githubLink: "",
       buttonText: t.taiko.button,

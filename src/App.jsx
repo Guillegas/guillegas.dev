@@ -208,7 +208,14 @@ function App() {
                     <h3>{job.title}</h3>
                     <span className="exp-date">{job.date}</span>
                   </div>
-                  <h4 className="company-name">{job.company}</h4>
+                  <h4 className="company-name">
+                    {job.company}
+                    {job.location && (
+                      <span className="location-name" style={{ display: "block", fontSize: "0.9rem", color: "var(--text-secondary)", marginTop: "0.2rem", fontWeight: "normal" }}>
+                        {job.location}
+                      </span>
+                    )}
+                  </h4>
                   <ul>
                     {job.points.map((point, i) => (
                       <li key={i}>{point}</li>

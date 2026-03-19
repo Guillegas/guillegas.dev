@@ -47,9 +47,22 @@ export const translations = {
       title: "Experience",
       items: [
         {
+          title: "Erasmus Internship",
+          date: "02/2026 - 05/2026",
+          company: "People Recruitment Tools Europe GmbH",
+          location: "Vienna, Austria",
+          points: [
+            "Erasmus internship at an AI-driven startup.",
+            "Contributed to multiplatform software development.",
+            "Data management.",
+            "Internal tooling within an international team.",
+          ],
+        },
+        {
           title: "Software Development Internship",
           date: "04/2025 - 06/2025",
           company: "Atos/Eviden",
+          location: "Seville, Spain",
           points: [
             "Learned how to use FastAPI to create APIs.",
             "Worked with a team of developers to create solutions for clients.",
@@ -60,6 +73,7 @@ export const translations = {
           title: "Data Research Internship",
           date: "05/2024 - 07/2024",
           company: "Solum",
+          location: "Seville, Spain",
           points: [
             "Deep Research about the electric mobility market.",
             "Learned how to plan projects and create a business plan for a startup.",
@@ -147,9 +161,22 @@ export const translations = {
       title: "Experiencia",
       items: [
         {
+          title: "Prácticas Erasmus",
+          date: "02/2026 - 05/2026",
+          company: "People Recruitment Tools Europe GmbH",
+          location: "Viena, Austria",
+          points: [
+            "Prácticas Erasmus en una startup de IA.",
+            "Desarrollo de software multiplataforma.",
+            "Gestión de datos.",
+            "Desarrollo de herramientas internas en un equipo internacional.",
+          ],
+        },
+        {
           title: "Prácticas de Desarrollo de Software",
           date: "04/2025 - 06/2025",
           company: "Atos/Eviden",
+          location: "Sevilla, España",
           points: [
             "Aprendí a usar FastAPI para crear APIs.",
             "Trabajé con un equipo de desarrolladores para crear soluciones para clientes.",
@@ -160,6 +187,7 @@ export const translations = {
           title: "Prácticas de Investigación de Datos",
           date: "05/2024 - 07/2024",
           company: "Solum",
+          location: "Sevilla, España",
           points: [
             "Investigación profunda sobre el mercado de la movilidad eléctrica.",
             "Aprendí a planificar proyectos y crear un plan de negocios para una startup.",
@@ -246,9 +274,22 @@ export const translations = {
       title: "Erfahrung",
       items: [
         {
+          title: "Erasmus-Praktikum",
+          date: "02/2026 - 05/2026",
+          company: "People Recruitment Tools Europe GmbH",
+          location: "Wien, Österreich",
+          points: [
+            "Erasmus-Praktikum bei einem KI-Startup.",
+            "Mitwirkung an plattformübergreifender Softwareentwicklung.",
+            "Datenmanagement.",
+            "Aufbau und Pflege interner Tools in einem internationalen Team.",
+          ],
+        },
+        {
           title: "Softwareentwicklungs-Praktikum",
           date: "04/2025 - 06/2025",
           company: "Atos/Eviden",
+          location: "Sevilla, Spanien",
           points: [
             "Lernte FastAPI zur Erstellung von APIs zu nutzen.",
             "Arbeitete mit einem Entwicklerteam an Lösungen für Kunden.",
@@ -259,6 +300,7 @@ export const translations = {
           title: "Datenforschungs-Praktikum",
           date: "05/2024 - 07/2024",
           company: "Solum",
+          location: "Sevilla, Spanien",
           points: [
             "Tiefgehende Recherche über den Markt für Elektromobilität.",
             "Lernte Projekte zu planen und einen Businessplan für ein Startup zu erstellen.",
