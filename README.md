@@ -1,16 +1,47 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# guillegas.dev
 
-Currently, two official plugins are available:
+**Personal developer portfolio**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://guillegas-dev.vercel.app/)
 
-## React Compiler
+**[→ Live site](https://guillegas-dev.vercel.app/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Overview
+
+Personal portfolio showcasing my projects, tech stack, and professional background. Built with React + Vite for fast loading and deployed on Vercel.
+
+---
+
+## Stack
+
+- **Framework:** React 18
+- **Bundler:** Vite
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+
+---
+
+## Run locally
+
+```bash
+git clone https://github.com/Guillegas/guillegas.dev.git
+cd guillegas.dev
+npm install
+npm run dev
+```
+
+---
+
+## Author
+
+**Guillermo Andújar Martínez**
+[guillegas-dev.vercel.app](https://guillegas-dev.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/guillermo-andújar-martínez/)
