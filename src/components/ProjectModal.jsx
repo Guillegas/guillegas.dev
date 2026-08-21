@@ -23,8 +23,11 @@ export default function ProjectModal({ project, onClose }) {
 
   if (!project) return null;
 
+  // Only repo links need a desktop; store/live links work fine on mobile.
+  const isRepoLink = project.githubLink?.includes("github.com");
+
   const handleGithubClick = (e) => {
-    if (isMobile) {
+    if (isMobile && isRepoLink) {
       e.preventDefault();
     }
   };
@@ -86,11 +89,11 @@ export default function ProjectModal({ project, onClose }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`modal-btn-github-large ${
-                isMobile ? "modal-btn-warning" : ""
+                isMobile && isRepoLink ? "modal-btn-warning" : ""
               }`}
               onClick={handleGithubClick}
             >
-              {isMobile
+              {isMobile && isRepoLink
                 ? t.modal.desktopRequired
                 : project.buttonText || t.modal.viewCode}
             </a>

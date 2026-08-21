@@ -47,6 +47,18 @@ export const translations = {
       title: "Experience",
       items: [
         {
+          title: "Full Stack AI Systems & Automations Developer",
+          date: "06/2026 - Present",
+          company: "BAKANO",
+          location: "Remote",
+          points: [
+            "Sole technical profile at BAKANO, an ecommerce company.",
+            "Design and build the company's full AI infrastructure, from customer service automation to logistics and internal operations.",
+            "Work with Python, n8n, Make, Claude and RAG systems.",
+            "Connect every layer of the business through intelligent, end-to-end solutions.",
+          ],
+        },
+        {
           title: "Erasmus Internship",
           date: "02/2026 - 05/2026",
           company: "People Recruitment Tools Europe GmbH",
@@ -93,7 +105,7 @@ export const translations = {
       categories: {
         frontend: "Frontend",
         backend: "Backend",
-        learning: "Learning",
+        ai: "AI & Automation",
         tools: "Tools",
       },
     },
@@ -101,7 +113,7 @@ export const translations = {
       title: "Contact",
       subtitle:
         "Feel free to reach out for collaborations, opportunities, or just to say hi!",
-      cv: "Europass CV",
+      cv: "Download CV (EN)",
     },
     modal: {
       technologies: "Technologies:",
@@ -161,6 +173,18 @@ export const translations = {
       title: "Experiencia",
       items: [
         {
+          title: "Desarrollador Full Stack de Sistemas de IA y Automatizaciones",
+          date: "06/2026 - Actualidad",
+          company: "BAKANO",
+          location: "En remoto",
+          points: [
+            "Único perfil técnico de BAKANO, una empresa de ecommerce.",
+            "Diseño y construyo toda la infraestructura de IA de la empresa, desde la automatización de atención al cliente hasta logística y operaciones internas.",
+            "Trabajo con Python, n8n, Make, Claude y sistemas RAG.",
+            "Conecto todas las capas del negocio mediante soluciones inteligentes de extremo a extremo.",
+          ],
+        },
+        {
           title: "Prácticas Erasmus",
           date: "02/2026 - 05/2026",
           company: "People Recruitment Tools Europe GmbH",
@@ -207,7 +231,7 @@ export const translations = {
       categories: {
         frontend: "Frontend",
         backend: "Backend",
-        learning: "Aprendiendo",
+        ai: "IA y Automatización",
         tools: "Herramientas",
       },
     },
@@ -215,7 +239,7 @@ export const translations = {
       title: "Contacto",
       subtitle:
         "¡No dudes en contactarme para colaboraciones, oportunidades o simplemente para saludar!",
-      cv: "CV Europass",
+      cv: "Descargar CV (EN)",
     },
     modal: {
       technologies: "Tecnologías:",
@@ -274,6 +298,18 @@ export const translations = {
       title: "Erfahrung",
       items: [
         {
+          title: "Full Stack AI Systems & Automations Developer",
+          date: "06/2026 - Heute",
+          company: "BAKANO",
+          location: "Remote",
+          points: [
+            "Einziges technisches Profil bei BAKANO, einem E-Commerce-Unternehmen.",
+            "Konzeption und Aufbau der gesamten KI-Infrastruktur des Unternehmens, von der Kundenservice-Automatisierung bis zu Logistik und internen Abläufen.",
+            "Arbeit mit Python, n8n, Make, Claude und RAG-Systemen.",
+            "Verbinde alle Ebenen des Geschäfts durch intelligente End-to-End-Lösungen.",
+          ],
+        },
+        {
           title: "Erasmus-Praktikum",
           date: "02/2026 - 05/2026",
           company: "People Recruitment Tools Europe GmbH",
@@ -320,7 +356,7 @@ export const translations = {
       categories: {
         frontend: "Frontend",
         backend: "Backend",
-        learning: "Lernen",
+        ai: "KI & Automatisierung",
         tools: "Werkzeuge",
       },
     },
@@ -328,7 +364,7 @@ export const translations = {
       title: "Kontakt",
       subtitle:
         "Zögere nicht, mich für Zusammenarbeit, Möglichkeiten oder einfach nur zum Hallo sagen zu kontaktieren!",
-      cv: "Europass CV",
+      cv: "Lebenslauf (EN)",
     },
     modal: {
       technologies: "Technologien:",
